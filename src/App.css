@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: rgb(226, 218, 218);
+}
+
+.app {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+.app__header h1{
+  color: rgb(10, 10, 10);
+}
+
+.app__search {
+  background-color: white;
+  height: 24px;
+}
+
+.app__left {
+  flex: 0.9 !important;
+}
+
+.app__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.app__stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: yellow;
+}
+
+.infoBox {
+  margin: 10px;
+  background-color: saddlebrown ;
+}
+
+@media (max-width: 990px) {
+  .app {
+    flex-direction: column;
+  }
+}
