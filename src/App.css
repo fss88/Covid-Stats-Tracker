@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: rgb(226, 218, 218);
+  background-color: #EBEBEB;
 }
 
 .app {
@@ -13,7 +13,7 @@ body {
 }
 
 .app__header h1{
-  color: rgb(10, 10, 10);
+  color: rgb(0, 0, 0);
 }
 
 .app__search {
@@ -23,6 +23,10 @@ body {
 
 .app__left {
   flex: 0.9 !important;
+}
+
+.app__right {
+  top: 20px;
 }
 
 .app__header {
@@ -36,16 +40,15 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: yellow;
 }
 
-.infoBox {
-  margin: 10px;
-  background-color: saddlebrown ;
-}
 
 @media (max-width: 990px) {
   .app {
     flex-direction: column;
+  }.app__left{
+    margin: 5px;
+  }.app__right{
+    margin: 5px;
   }
 }
