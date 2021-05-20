@@ -6,7 +6,7 @@ body {
   background-color: #EBEBEB;
 }
 
-.app {
+.hero {
   display: flex;
   justify-content: space-evenly;
   padding: 20px;
@@ -42,6 +42,12 @@ body {
   justify-content: space-between;
 }
 
+
+.app__region {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
 
 @media (max-width: 990px) {
   .app {

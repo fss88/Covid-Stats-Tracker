@@ -1,7 +1,6 @@
 .table {
     margin-top:20px;
-    overflow-y: scroll;
-    height: 50vh;
+    width: 80vw;
     color: #6a5d5d;
     background-color: white;
 }
@@ -12,7 +11,7 @@
 }
 
 .table td {
-    padding: 0.5rem;
+    padding: 1.0rem;
 }
 
 .table tr:nth-of-type(odd) {

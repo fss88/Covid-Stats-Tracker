@@ -4,7 +4,7 @@ import './InfoBox.css';
 
 function InfoBox({title, cases, total, ...props}) {
     return (
-        <div >recovered
+        <div >
             <Card 
             onClick={props.onClick}
             className="infoCard" >
