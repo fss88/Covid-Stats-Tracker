@@ -3,14 +3,13 @@ import { useEffect, useState } from 'react';
 import InfoBox from './InfoBox';
 import Map from './Map';
 import LineGraph from './LineGraph';
-import './App.css';
+import './CountriesStats.css';
 import "leaflet/dist/leaflet.css"
 import { formatStats } from './utilis';
-import Table from './Table';
 
 
 
-function App() {
+function CountriesStats() {
   const [countries, setCountries] = useState([]);
   const [country, setCountry] = useState('worldwide');
   const [countryInfo, setCountryInfo] = useState({});
@@ -153,20 +152,10 @@ function App() {
           </div>
         </div>
       </div>
-      <h1 style={{textAlign: 'center'}}>Regional Analysis</h1>
-      <div className="app__region">
-       
-        <div className="region_left">
-        <Table continents={continents} />
-        </div>
-        {/* <div className="region_right">
-          <Table continents={continents} />
-        </div> */}
-       
-      </div>
+      
     </div>
 
   );
 }
 
-export default App;
+export default CountriesStats;

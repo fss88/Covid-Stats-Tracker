@@ -1,17 +1,18 @@
 .table {
     margin-top:20px;
-    width: 80vw;
+    width: 100vw;
     color: #6a5d5d;
     background-color: white;
 }
 
-.table tr {
+/* .table tr {
     display: flex;
-    justify-content: space-between;
-}
+    justify-content: space-evenly;
+} */
 
 .table td {
-    padding: 1.0rem;
+    padding: 2.0rem 3.0rem;
+    text-align: left;
 }
 
 .table tr:nth-of-type(odd) {
