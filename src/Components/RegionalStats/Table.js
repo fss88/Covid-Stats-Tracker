@@ -7,11 +7,11 @@ function Table({continents}) {
         <div className="table">
             {/* <table> */}
                 <tr>
-                    <th>Continent</th>
-                    <th>Confirmed Cases</th>
-                    <th>Active</th>
-                    <th>Recovered</th>
-                    <th>Deaths</th>
+                    <th style={{color: "black"}}>Continent</th>
+                    <th style={{color: "black"}}>Confirmed Cases</th>
+                    <th style={{color: "red"}}>Active</th>
+                    <th style={{color: "green"}}>Recovered</th>
+                    <th style={{color: "purple"}}>Deaths</th>
                 </tr>
             {/* </table> */}
              {continents.map((continent) => (
@@ -19,7 +19,7 @@ function Table({continents}) {
                 <tr>
                     <td>{continent.continent}</td>
                     <td>
-                        <strong>{numeral(continent.cases).format("0,0")}</strong>
+                        {numeral(continent.cases).format("0,0")}
                     </td>
                     <td>{continent.active}</td>
                     <td>{continent.recovered}</td>

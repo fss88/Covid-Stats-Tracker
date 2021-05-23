@@ -18,7 +18,7 @@ const casesTypeColors = {
     },
     deaths: {
       hex: "#fb4443",
-      rgb: "rgb(251, 68, 67)",
+      rgb: "rgb(128,0,128)",
       half_op: "rgba(251, 68, 67, 0.5)",
       multiplier: 200,
     },
@@ -47,8 +47,10 @@ export const showDataOnMap = (data, casesType='cases') =>
         <Circle
             center = {[country.countryInfo.lat, country.countryInfo.long]}
             fillOpacity={0.4}
-            color={casesTypeColors[casesType].rgb}
-            fillColor={casesTypeColors[casesType].rgb}
+            pathOptions={{
+                color: casesTypeColors[casesType].rgb,
+                fillColor: casesTypeColors[casesType].rgb,
+            }}
             radius={
                 Math.sqrt(country[casesType]) * casesTypeColors[casesType].multiplier
             }

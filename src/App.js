@@ -157,20 +157,23 @@ function App() {
 
               <div className="app__stats">
                 <InfoBox
-                  onClick={e => setCasesType('cases')}
+                  active={casesType === "cases"}
+                  onClick={(e) => setCasesType("cases")}
                   title="Cases"
                   cases={formatStats(countryInfo.todayCases)}
                   total={formatStats(countryInfo.cases)} />
 
                 <InfoBox
-                  onClick={e => setCasesType('recovered')}
+                  active={casesType === "recovered"}
+                  onClick={(e) => setCasesType("recovered")}
                   title="Recoveries"
                   cases={formatStats(countryInfo.todayRecovered)}
                   total={formatStats(countryInfo.recovered)}
                 />
 
                 <InfoBox
-                  onClick={e => setCasesType('deaths')}
+                  active={casesType === "deaths"}
+                  onClick={(e) => setCasesType("deaths")}
                   title="Deaths"
                   cases={formatStats(countryInfo.todayDeaths)}
                   total={formatStats(countryInfo.deaths)}

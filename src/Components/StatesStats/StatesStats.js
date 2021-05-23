@@ -158,7 +158,7 @@ function StatesStats() {
         
         <Grid item md>
         <CssBaseline />
-        <h3>Covid 19 in different states</h3>
+        <h3>COVID-19 in Different States</h3>
           <TableStates
             states={allStates}
           />

@@ -93,7 +93,7 @@ function LineGraph({casesType = 'cases'}) {
                     data = {{
                         datasets: [
                             {
-                                label: "Worldwide daily cases",
+                                label: "Worldwide Daily Cases",
                                 fill: true,
                                 borderColor: "#CC1034",
                                 backgroundColor: "rgba(204, 16, 52, 0.7)",

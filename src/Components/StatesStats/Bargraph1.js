@@ -22,28 +22,28 @@ function Bargraph1({data}) {
         .then(data => {
             let dataPoint=[
                 {
-                    label: 'cases',
-                    value: data?.cases
-                },
-                {
                     label: 'Projected Cases',
                     value: data?.cases * 10
                 },
                 {
-                    label: 'recovered',
+                    label: 'Confirmed Cases',
+                    value: data?.cases
+                },
+                {
+                    label: 'Recovered Cases',
                     value: data?.recovered
                 },
                 {
-                    label: 'active',
+                    label: 'Active Cases',
                     value: data?.active
-                },
-                {
-                    label: 'deaths',
-                    value: data?.deaths
                 },
                 {
                     label: 'Projected Deaths',
                     value: data?.deaths * 10
+                },
+                {
+                    label: 'Deaths',
+                    value: data?.deaths
                 }
             ]
             setData(dataPoint)
@@ -59,15 +59,15 @@ function Bargraph1({data}) {
     // Create a JSON object to store the chart configurations
 const chartConfigs = {
     type: "column2d", // The chart type
-    width: "400", // Width of the chart
-    height: "400", // Height of the chart
+    width: "500", // Width of the chart
+    height: "500", // Height of the chart
     dataFormat: "json", // Data type
     dataSource: {
       // Chart Configuration
       chart: {
-        caption: `Covid 19 confirmed cases in ${data}`,
-        xAxisName: "Continent",           //Set the x-axis name
-        yAxisName: "TotalCovid cases ",
+        caption: `COVID-19 Confirmed Cases in ${data}`,
+        xAxisName: "Type of Cases",           //Set the x-axis name
+        yAxisName: "Number of Cases",
         theme: 'candy'                 //Set the theme for your chart
       },
       // Chart Data - from step 2

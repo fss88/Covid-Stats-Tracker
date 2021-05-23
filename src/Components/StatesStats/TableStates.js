@@ -7,11 +7,11 @@ function TableStates({states}) {
         <div className="table">
             {/* <table> */}
                 <tr style={{padding: '10px'}}>
-                    <th>country</th>
-                    <th>Confirmed Cases</th>
-                    <th>Active</th>
-                    <th>Recovered</th>
-                    <th>Deaths</th>
+                    <th style={{color: "black"}}>Country</th>
+                    <th style={{color: "black"}}>Confirmed Cases</th>
+                    <th style={{color: "red"}}>Active</th>
+                    <th style={{color: "green"}}>Recovered</th>
+                    <th style={{color: "purple"}}>Deaths</th>
                 </tr>
              {states.map((country) => (
                 

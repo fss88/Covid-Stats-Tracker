@@ -85,7 +85,7 @@ function CountriesStats() {
       <div className="hero">
         <div className="app__left">
           <div className="app__header">
-            <h1>CovTrack2021</h1>
+            <h1 style={{color: "#3f51b5"}}>COVID-19 Stats Tracker</h1>
             <FormControl>
               <Select className="app__search" variant="outlined"
                 onChange={onCountryChange}
@@ -111,7 +111,7 @@ function CountriesStats() {
             zoom={mapZoom}
           />
           <div>
-          <h3>Covid 19 in different countries</h3>
+          <h3 style={{color: "#3f51b5"}}>COVID-19 in Different Countries</h3>
           <Table
             countries={mapCountries}
           />
@@ -122,7 +122,7 @@ function CountriesStats() {
 
         <div className="app_right">
           <div className="app__right__top">
-            <h3 >Worldwide new Cases</h3>
+            <h3 style={{color: "#3f51b5"}}>Worldwide New Cases</h3>
             <LineGraph />
           </div>
 
