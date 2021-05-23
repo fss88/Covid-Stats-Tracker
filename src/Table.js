@@ -7,19 +7,17 @@ function Table({countries}) {
         <div className="table">
             {/* <table> */}
                 <tr style={{padding: '10px'}}>
-                    <th>country</th>
+                    <th>Country</th>
                     <th>Confirmed Cases</th>
-                    <th>Active</th>
-                    <th>Recovered</th>
-                    <th>Deaths</th>
+                    <th style={{color: "red"}}>Active</th>
+                    <th style={{color: "lightgreen"}}>Recovered</th>
+                    <th style={{color: "purple"}}>Deaths</th>
                 </tr>
              {countries.map((country) => (
                 
                 <tr>
                     <td>{country.country}</td>
-                    <td>
-                        <strong>{numeral(country.cases).format("0,0")}</strong>
-                    </td>
+                    <td>{numeral(country.cases).format("0,0")}</td>
                     <td>{country.active}</td>
                     <td>{country.recovered}</td>
                     <td>{country.deaths}</td>
