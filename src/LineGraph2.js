@@ -54,7 +54,6 @@ function LineGraph2({data}) {
     const [graphData, setData] = useState({});
 
     const buildChartData = (data, casesType='cases') => {
-        console.log();
         const chartData = [];
         let lastDataPoint;
         if(stateName === 'USA'){

@@ -157,23 +157,20 @@ function App() {
 
               <div className="app__stats">
                 <InfoBox
-                  active={casesType === "cases"}
-                  onClick={(e) => setCasesType("cases")}
+                  onClick={e => setCasesType('cases')}
                   title="Cases"
                   cases={formatStats(countryInfo.todayCases)}
                   total={formatStats(countryInfo.cases)} />
 
                 <InfoBox
-                  active={casesType === "recovered"}
-                  onClick={(e) => setCasesType("recovered")}
+                  onClick={e => setCasesType('recovered')}
                   title="Recoveries"
                   cases={formatStats(countryInfo.todayRecovered)}
                   total={formatStats(countryInfo.recovered)}
                 />
 
                 <InfoBox
-                  active={casesType === "deaths"}
-                  onClick={(e) => setCasesType("deaths")}
+                  onClick={e => setCasesType('deaths')}
                   title="Deaths"
                   cases={formatStats(countryInfo.todayDeaths)}
                   total={formatStats(countryInfo.deaths)}
@@ -239,7 +236,7 @@ function App() {
         <div className="region_right">
         
           <LineGraph2 
-            data={state}
+            data={'alabama'}
           />
           <Bargraph1 
             data={state}

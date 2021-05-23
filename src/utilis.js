@@ -48,10 +48,8 @@ export const showDataOnMap = (data, casesType='cases') =>
         <Circle
             center = {[country.countryInfo.lat, country.countryInfo.long]}
             fillOpacity={0.4}
-            pathOptions={{
-                color: casesTypeColors[casesType].rgb,
-                fillColor: casesTypeColors[casesType].rgb,
-            }}
+            color={casesTypeColors[casesType].rgb}
+            fillColor={casesTypeColors[casesType].rgb}
             radius={
                 Math.sqrt(country[casesType]) * casesTypeColors[casesType].multiplier
             }
@@ -75,10 +73,8 @@ export const showDataOnMap = (data, casesType='cases') =>
         <Circle
             center = {{lat: 38, lng: -97}}
             fillOpacity={0.4}
-            pathOptions={{
-                color: casesTypeColors[casesType].rgb,
-                fillColor: casesTypeColors[casesType].rgb,
-            }}
+            color={casesTypeColors[casesType].rgb}
+            fillColor={casesTypeColors[casesType].rgb}
             radius={
                 Math.sqrt(data[casesType]) * casesTypeColors[casesType].multiplier
             }
