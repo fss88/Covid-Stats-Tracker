@@ -6,6 +6,7 @@ import LineGraph from './LineGraph';
 import './CountriesStats.css';
 import "leaflet/dist/leaflet.css"
 import { formatStats } from './utilis';
+import Table from './Table'
 
 
 
@@ -109,7 +110,14 @@ function CountriesStats() {
             center={mapCenter}
             zoom={mapZoom}
           />
+          <div>
+          <h3>Covid 19 in different countries</h3>
+          <Table
+            countries={mapCountries}
+          />
+          </div>
 
+         
         </div>
 
         <div className="app_right">
@@ -147,7 +155,7 @@ function CountriesStats() {
           </div>
         </div>
       </div>
-      
+       
     </div>
 
   );

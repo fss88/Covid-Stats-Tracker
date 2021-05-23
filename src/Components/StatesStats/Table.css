@@ -1,0 +1,22 @@
+.table {
+    margin-top:20px;
+    width: 70vw;
+    height: 600px;
+    overflow: scroll;
+    color: #6a5d5d;
+    background-color: white;
+}
+
+/* .table tr {
+    display: flex;
+    justify-content: space-evenly;
+} */
+
+.table td {
+    padding: 2.0rem 3.0rem;
+    text-align: left;
+}
+
+.table tr:nth-of-type(odd) {
+    background-color: #f3f2f8;
+}
