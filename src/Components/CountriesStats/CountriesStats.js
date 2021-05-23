@@ -16,7 +16,6 @@ function CountriesStats() {
   const [mapCenter, setMapCenter] = useState({ lat: 35, lng: -42.658 })
   const [mapZoom, setMapZoom] = useState(3);
   const [mapCountries, setMapCountries] = useState([]);
-  const [continents, setContinents] = useState([]);
   // const [states, setStateData] = useState([]);
   const [casesType, setCasesType] = useState('cases');
 
@@ -29,11 +28,7 @@ function CountriesStats() {
         setCountryInfo(data);
       })
 
-    fetch('https://api.caw.sh/v3/covid-19/continents')
-    .then(response => response.json())
-    .then(data => {
-      setContinents(data)
-    })
+   
 
     // fetch('https://api.caw.sh/v3/covid-19/continents')
     // .then(response => response.json())

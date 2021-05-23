@@ -7,7 +7,8 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import CountriesStats from './CountriesStats/CountriesStats';
-import RegionalStats from './RegionalStats/RegionalStats'
+import RegionalStats from './RegionalStats/RegionalStats';
+import StateStats from './StatesStats/StatesStats'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -73,7 +74,7 @@ export default function SimpleTabs() {
         <RegionalStats />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        US Box infos go here
+        <StateStats />
       </TabPanel>
     </div>
   );
