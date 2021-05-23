@@ -4,7 +4,7 @@ import './InfoBox.css';
 
 function RegionalInfoBox({title, cases, total, ...props}) {
     return (
-        <div >
+        <div style={{flex: 1}}>
             <Card 
             onClick={props.onClick}
             className="infoCard" >

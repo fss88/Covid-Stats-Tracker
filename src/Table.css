@@ -8,7 +8,6 @@
 }
 
 .table tr {
-    display: flex;
     justify-content: space-between;
 }
 
