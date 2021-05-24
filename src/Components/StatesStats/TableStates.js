@@ -7,7 +7,7 @@ function TableStates({states}) {
         <div className="table">
             {/* <table> */}
                 <tr style={{padding: '10px'}}>
-                    <th style={{color: "black"}}>Country</th>
+                    <th style={{color: "black"}}>States</th>
                     <th style={{color: "black"}}>Confirmed Cases</th>
                     <th style={{color: "red"}}>Active</th>
                     <th style={{color: "green"}}>Recovered</th>
@@ -17,9 +17,7 @@ function TableStates({states}) {
                 
                 <tr>
                     <td>{country.state}</td>
-                    <td>
-                        <strong>{numeral(country.cases).format("0,0")}</strong>
-                    </td>
+                    <td>{numeral(country.cases).format("0,0")}</td>
                     <td>{country.active}</td>
                     <td>{country.recovered}</td>
                     <td>{country.deaths}</td>

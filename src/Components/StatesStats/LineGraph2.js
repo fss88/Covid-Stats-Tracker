@@ -123,7 +123,7 @@ function LineGraph2({data}) {
                             data = {{
                                 datasets: [
                                     {
-                                        label: `${stateName} daily cases last 30 days`,
+                                        label: `${stateName} Daily Cases Last 30 Days`,
                                         fill: true,
                                         borderColor: "#CC1034",
                                         backgroundColor: "rgba(204, 16, 52, 0.7)",
