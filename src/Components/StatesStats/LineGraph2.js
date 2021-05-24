@@ -72,11 +72,13 @@ function LineGraph2({data}) {
             
             for(let date of data){
                 if(lastDataPoint) {
-                    const newDataPoint = {
-                        x: date.date,
-                        y: date.cases - lastDataPoint
-                    }
-                    chartData.push(newDataPoint);
+                  let dateArr = date.date.split('-');
+
+                  const newDataPoint = {
+                      x: `${parseInt(dateArr[1])}/${parseInt(dateArr[2])}/${dateArr[0].substring(2)}`,
+                      y: date.cases - lastDataPoint
+                  }
+                  chartData.push(newDataPoint);
                 }
                 lastDataPoint = date.cases;
             }
