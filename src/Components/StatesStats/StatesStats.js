@@ -67,7 +67,9 @@ function StatesStats() {
     fetch('https://api.caw.sh/v3/covid-19/states')
       .then((response) => response.json())
       .then((data)=> {
-        setAllStates(data);
+        let sorted = data.sort((a, b) => parseInt(b.cases) - parseInt(a.cases));
+
+        setAllStates(sorted);
       });
   }
 

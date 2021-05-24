@@ -56,10 +56,12 @@ function CountriesStats() {
           value: country.countryInfo.iso2,
         }));
 
+        let sorted = data.sort((a, b) => parseInt(b.cases) - parseInt(a.cases));
+
         // const sortedData = sortData(data);
         // setTableData(sortedData);
         setCountries(countries);
-        setMapCountries(data);
+        setMapCountries(sorted);
       });
   };
 

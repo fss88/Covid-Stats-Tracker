@@ -26,7 +26,8 @@ function RegionalStats() {
     fetch('https://api.caw.sh/v3/covid-19/continents')
       .then(response => response.json())
       .then(data => {
-        setContinents(data)
+        let sorted = data.sort((a, b) => parseInt(b.cases) - parseInt(a.cases));
+        setContinents(sorted);
       })
 
     // fetch('https://api.caw.sh/v3/covid-19/continents')
