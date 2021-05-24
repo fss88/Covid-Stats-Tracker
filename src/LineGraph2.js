@@ -54,7 +54,8 @@ function LineGraph2({data}) {
     const [graphData, setData] = useState({});
 
     const buildChartData = (data, casesType='cases') => {
-      const chartData = [];
+        console.log();
+        const chartData = [];
         let lastDataPoint;
         if(stateName === 'USA'){
             for(let date in data.cases){
@@ -71,8 +72,10 @@ function LineGraph2({data}) {
             
             for(let date of data){
                 if(lastDataPoint) {
+                    let dateArr = date.date.split('-');
+
                     const newDataPoint = {
-                        x: date.date,
+                        x: `${parseInt(dateArr[1])}/${parseInt(dateArr[2])}/${dateArr[0].substring(2)}`,
                         y: date.cases - lastDataPoint
                     }
                     chartData.push(newDataPoint);
@@ -96,6 +99,7 @@ function LineGraph2({data}) {
                     setData(chartData);
                 }else {
                     let chartData = buildChartData(data, 'cases');
+                    console.log(chartData);
                     setData(chartData);
                 }
                 
