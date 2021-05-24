@@ -13,20 +13,28 @@ function RegionalStats() {
 
   // get worldwide data
   useEffect(() => {
+    init();
 
+    const interval = setInterval(() => {
+      init()
+    }, 3600000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const init = async () => {
     fetch('https://api.caw.sh/v3/covid-19/continents')
-    .then(response => response.json())
-    .then(data => {
-      setContinents(data)
-    })
+      .then(response => response.json())
+      .then(data => {
+        setContinents(data)
+      })
 
     // fetch('https://api.caw.sh/v3/covid-19/continents')
     // .then(response => response.json())
     // .then(data => {
     //   setContinents(data)
     // })
-
-  }, []);
+  }
 
   return (
     <>

@@ -20,9 +20,19 @@ function CountriesStats() {
   // const [states, setStateData] = useState([]);
   const [casesType, setCasesType] = useState('cases');
 
-
-  // get worldwide data
   useEffect(() => {
+    init();
+    getAllCountriesData();
+
+    const interval = setInterval(() => {
+      init();
+      getAllCountriesData();
+    }, 3600000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const init = async () => {
     fetch('https://disease.sh/v3/covid-19/all')
       .then(response => response.json())
       .then(data => {
@@ -36,31 +46,22 @@ function CountriesStats() {
     // .then(data => {
     //   setContinents(data)
     // })
+  }
 
-  }, []);
+  const getAllCountriesData = async () => {
+    await fetch('https://disease.sh/v3/covid-19/countries').then((response) => response.json())
+      .then((data) => {
+        const countries = data.map((country) => ({
+          name: country.country,
+          value: country.countryInfo.iso2,
+        }));
 
- 
-
-  useEffect(() => {
-    // Send an async request to get all countries' data, wait for the response and use that response
-
-    const getAllCountriesData = async () => {
-      await fetch('https://disease.sh/v3/covid-19/countries').then((response) => response.json())
-        .then((data) => {
-          const countries = data.map((country) => ({
-            name: country.country,
-            value: country.countryInfo.iso2,
-          }));
-
-          // const sortedData = sortData(data);
-          // setTableData(sortedData);
-          setCountries(countries);
-          setMapCountries(data);
-        });
-    };
-
-    getAllCountriesData();
-  }, []);
+        // const sortedData = sortData(data);
+        // setTableData(sortedData);
+        setCountries(countries);
+        setMapCountries(data);
+      });
+  };
 
   const onCountryChange = async (e) => {
     const countryCode = e.target.value;

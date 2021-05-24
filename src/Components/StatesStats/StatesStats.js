@@ -40,26 +40,36 @@ function StatesStats() {
   const [allStates, setAllStates] = useState([]);
   
   useEffect(() => {
+    init();
+
+    const interval = setInterval(() => {
+      init()
+    }, 3600000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const init = async () => {
     // get all US states
     fetch('https://api.caw.sh/v3/covid-19/historical/usacounties')
-    .then(response => response.json())
-    .then(data => {
-      setStateData(data);
-    });
+      .then(response => response.json())
+      .then(data => {
+        setStateData(data);
+      });
     // get USA data
     fetch('https://disease.sh/v3/covid-19/countries/US')
-    .then(response => response.json())
-    .then(data => {
-      setStateInfo(data);
-    })
+      .then(response => response.json())
+      .then(data => {
+        setStateInfo(data);
+      })
 
     // get all states data
     fetch('https://api.caw.sh/v3/covid-19/states')
-    .then((response) => response.json())
-    .then((data)=> {
-      setAllStates(data);
-    });
-  }, []);
+      .then((response) => response.json())
+      .then((data)=> {
+        setAllStates(data);
+      });
+  }
 
   const onStateChange =(e) => {
     const stateName = e.target.value;
